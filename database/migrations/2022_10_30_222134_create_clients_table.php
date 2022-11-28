@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("address", 100);
             $table->string("phonenumber", 100);
             $table->softDeletes();
-            $table->enum("possibleFutureBusinesss", array("closed temporary", "closed permanent", "active"));
+            $table->foreignId(column: "possible_future_business")->constrained(table: "possible_future_business");
         });
     }
 
