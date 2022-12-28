@@ -27,7 +27,7 @@ return new class extends Migration
             $table->enum('time_period', array('Y' , 'M', 'W', 'D', 'H'));
             // Frequency of 0 means template is currently being sent as a one off thing. No repeating cycle.
             $table->integer('frequency');
-            $table->string();
+            // $table->string();
         });
     }
 
