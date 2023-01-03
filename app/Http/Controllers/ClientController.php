@@ -15,7 +15,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        // return Client::all();
     }
 
     /**
@@ -47,7 +47,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        return $client;
+        return view("client/client", ["client" => $client]);
     }
 
     /**

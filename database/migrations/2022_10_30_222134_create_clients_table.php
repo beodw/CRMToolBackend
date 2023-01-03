@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("address", 100);
             $table->string("phonenumber", 100);
             $table->softDeletes();
-            $table->foreignId(column: "possible_future_business")->constrained(table: "possible_future_business");
+            $table->foreignId("possible_future_business_id")->references("id")->on("possible_future_business");
         });
     }
 

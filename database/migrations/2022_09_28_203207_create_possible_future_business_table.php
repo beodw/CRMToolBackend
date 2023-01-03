@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('possible_future_business', function (Blueprint $table) {
             $table->id();
-            $table->enum("status", array("closed temporary", "closed permanent", "active"));
+            $table->string("stage", 100);
+            // $table->enum("status", array("closed temporary", "closed permanent", "active"));
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('possible_future_businesses');
+        Schema::dropIfExists('possible_future_business');
     }
 };
